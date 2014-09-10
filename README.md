@@ -1,4 +1,4 @@
 diagram.js
 ==========
 
-Simple jQuery UI plugin to create block diagrams
+Simple jQuery UI widget to create block diagrams
