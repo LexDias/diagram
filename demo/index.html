@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Diagram</title>
+
+	<script language="javascript" src="jquery.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="jquery-ui.custom.css"/>
+	<script language="javascript" src="jquery-ui.custom.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css"/>
+	<script language="javascript" src="bootstrap.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../diagram.css">
+	<script language="javascript" src="../diagram.js"></script>
+</head>
+
+<body>
+	<div id="board"></div>
+
+	<table id="table" class="table table-bordered" style="width: 200px">
+	<thead>
+		<tr><th colspan="2" class="alert-success">Employee</th></tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>id</td>
+		<td>integer</td>
+	</tr>
+	<tr>
+		<td>name</td>
+		<td>varchar(200)</td>
+	</tr>
+	<tr>
+		<td>dateOfBirth</td>
+		<td>timestamp</td>
+	</tr>
+	</tbody>
+	</table>
+
+	<script type="text/javascript" charset="ISO-8859-1">
+	jQuery(document).ready(function($) {
+
+		// Create the diagram from #board
+		$board = $('#board').diagram();
+
+		// Create a diagram object from #table
+		$table = $('#table')
+			.diagramObject({
+				diagram: $board,
+				position: {top: 100, left: 100}
+			});
+/*
+		$box5 = $('#box5')
+			.diagramObject({
+				diagram: $board,
+				position: {top: 400, left: 400}
+			})
+			.diagramObject('connectTo',$box4);
+*/
+	});
+	</script>
+
+
+</body>
+
+</html>
